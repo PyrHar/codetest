@@ -10,7 +10,7 @@ class Book:
     def __str__(self):
         return f"{self.name}/{self.author}/{self.isbn}/{self.year}"
 
-# Checking if library exists and if not creating one
+#Checking if library exists and if not creating one
 def load_library(file_path):
     books = []
     try:
@@ -30,8 +30,8 @@ def save_books(file_path, books):
         for book in sorted(books, key=lambda b: b.year):
             file.write(f"{book}\n")
 
-# Checking if there are books stored inside text files
-# If yes then displaying them into the CMD
+#Checking if there are books stored inside text files
+#If yes then displaying them into the CMD
 def show_books(books):
     if not books:
         print("\nNo books yet, lets add one!")
@@ -58,7 +58,8 @@ def add_book():
         print("Please enter all required infos")
         return None
 
-#checking if the 2 correct arguments are given properly
+#Checking if the both arguments are given properly on startup
+#Explained in README
 def main():
     if len(sys.argv) != 2:
         print("Usage: library.py <library.txt>")
